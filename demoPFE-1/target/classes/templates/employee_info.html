@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang ="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Employee Informations</title>
+</head>
+<body>
+<table class=t2>
+<tr><td><h1>les informations de </h1></td><td><h1 th:text=" ${employee.firstName}"></h1></td><td><h1 th:text="${employee.lastName}"></h1></td></tr>
+<tr><td><b>Le nom :</b></td><td th:text="${employee.lastName}"></td></tr>
+<tr><td><b>Le prenom :</b></td><td th:text="${employee.firstName}"></td></tr>
+<tr><td><b>Date d'embauche :</b></td><td th:text="${employee.HireDate}"></td></tr>
+<tr><td><b>La fonction :</b></td><td th:text="${employee.job}"></td></tr>
+<tr><td><b>La date de naissance :</b></td><td th:text="${employee.birthday}"></td></tr>
+<tr><td><b>nationalitee :</b></td><td th:text="${employee.country}"></td></tr>
+<tr><td><b>Salutation :</b></td><td th:text="${employee.Salutation}"></td></tr>
+
+<tr><td><b>Marital Status :</b></td><td th:text="${employee.MaritalStatus}"></td></tr>
+<tr><td><b>Gender :</b></td><td th:text="${employee.Sexe}"></td></tr>
+<tr><td><b>NationalityIDe :</b></td><td th:text="${employee.NationnalityIDe}"></td></tr>
+<tr><td><b>Social Security :</b></td><td th:text="${employee.SocialSecurity}"></td></tr>
+<tr><td></td><td><button><a th:href="@{/showFormForUpdate/{id}(id=${employee.id})}">Update</a></button></td></tr>
+</table>
+<hr><a th:href="@{/}">Retour a la liste des employees</a> <hr>
+</body>
+</html>
